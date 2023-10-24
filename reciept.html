@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <style>
+        body{
+        background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader"></div>
+    <div class="navbar" style="background-color: darkblue; height: 8vh;">
+        <h1>
+            FIC
+        </h1>
+        <div class="wrap">
+            <ul>
+                <li>
+                    Home
+                </li>
+                <li>
+                    About Us
+                </li>  
+                <li>Sections</li>
+                <li>Academics</li>
+                <li>Addmission</li>
+                <li> Result</li>
+                <li class="log">Campus</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-section">
+    <div class="banner-section">
+        <img src="./img/Academia-International-College-Logo-removebg-preview.png" alt="">
+        <div class="main">
+        <h1>Flame International College</h1>
+        <p>Motto: Peace & Unity</p>
+    </div>
+    </div>
+    <div class="bod"></div>
+    <div class="bod2"></div>
+     <form action="welcome.html" method="post" name="myform" onsubmit="return checkin()">
+           <div class="alert" id="alert"></div>
+           <div class="boxes">
+           <div>
+           <label for="">FirstName</label><br>
+            <input type="text" class="fname" id="fname">
+        </div>
+        <div>
+            <label for="">LastName</label><br>
+            <input type="text"  class="lname" id="lname">
+        </div>
+           </div>
+           <div class="boxes">
+        <div>
+            <label for="">Email</label> <br>
+            <input type="text" class="mail" id="mail">
+        </div>
+        <div>
+            <label for="">Phone Number</label><br>
+            <input type="text" class="num" id="num">
+        </div>
+           </div>
+           <div class="boxes">
+        <div>
+            <label for="">Mac Number</label><br>
+            <input type="text" class="mac" id="mac">
+        </div>
+        <div>
+            <label for="">ID Number</label> <br>
+            <input type="text" class="id" id="id">
+        </div>
+           </div>
+           <div class="boxes">
+        <div>
+            <label for="">Reciept Number</label> <br>
+            <input type="text" class="reciept" id="reciept">
+        </div>
+        <div> 
+            <label for="">Amount</label> <br>
+            <input type="text" class="amount" id="amount">
+        </div>
+           </div>
+           <div class="box1">
+        <label>Payment Method</label><br>
+            <select id="selection">
+                <option value="select">Select Payment Method</option>
+                <option value="Installation">Installation</option>
+                <option value="Full Payment">Full Payment</option>
+            </select>
+           </div>
+        <button> Proceed</button>
+    </form>
+    </div>
+
+    <script>
+
+        let loader = document.getElementById('preloader');
+
+        function viewpage(){
+            loader.style.display = 'none';
+        }
+        window.addEventListener('load', () =>{
+            setTimeout(viewpage, 3000)
+        })
+
+
+
+
+        function checkin(){
+            let error = document.getElementById('alert');
+            let alert = document.getElementById('alert');
+            let FirstName = document.getElementById('fname').value;
+            let Fname = document.getElementById('fname');
+            let LastName = document.getElementById('lname').value;
+            let Lname = document.getElementById('lname');
+            let email = document.getElementById('mail').value;
+            let mil = document.getElementById('mail');
+            let number = document.getElementById('num').value;
+            let numb = document.getElementById('num');
+            let mactric = document.getElementById('mac').value;
+            let mact = document.getElementById('mac');
+            let idnumber = document.getElementById('id').value;
+            let idnum = document.getElementById('id');
+            let recip = document.getElementById('reciept').value;
+            let rec = document.getElementById('reciept');
+            let amoun = document.getElementById('amount').value;
+            let amo = document.getElementById('amount');
+            let selec = document.getElementById('selection').value;
+            let sele = document.getElementById('selection');
+
+            let alpha = /^[a-zA-Z]+$/
+            let Numbers = /^[0-9]+$/
+            let eail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+
+
+            alert.addEventListener('click', () => {
+                alert.style.border = 'none';
+                error.style.backgroundColor = 'green';
+                error.style.color = 'transparent';
+                error.style.border = 'none';
+                error.style.boxShadow = 'none';
+            })
+
+            Fname.addEventListener('click', () => {
+                Fname.style.border = 'none';
+                error.style.backgroundColor = 'transparent';
+                error.style.color = 'transparent';
+                error.style.border = 'none';
+                error.style.boxShadow = 'none';
+            })
+
+            Lname.addEventListener('click', () =>{
+                Lname.style.border = 'none';
+                error.style.backgroundColor = 'transparent';
+                error.style.color = 'transparent';
+                error.style.border = 'none';
+                error.style.boxShadow = 'none';
+            })
+
+            mil.addEventListener('click', () =>{
+                mil.style.border = 'none';
+                error.style.backgroundColor = 'transparent';
+                error.style.color = 'transparent';
+                error.style.border = 'none';
+                error.style.boxShadow = 'none';
+            })
+
+            numb.addEventListener('click', () =>{
+                numb.style.border = 'none';
+                error.style.backgroundColor = 'transparent';
+                error.style.color = 'transparent';
+                error.style.border = 'none';
+                error.style.boxShadow = 'none';
+            })
+            mact.addEventListener('click', () =>{
+                mact.style.border = 'none';
+                error.style.backgroundColor = 'transparent';
+                error.style.color = 'transparent';
+                error.style.border = 'none';
+                error.style.boxShadow = 'none';
+            })
+            idnum.addEventListener('click', () =>{
+                idnum.style.border = 'none';
+                error.style.backgroundColor = 'transparent';
+                error.style.color = 'transparent';
+                error.style.border = 'none';
+                error.style.boxShadow = 'none';
+            })
+            rec.addEventListener('click', () =>{
+                rec.style.border = 'none';
+                error.style.backgroundColor = 'transparent';
+                error.style.color = 'transparent';
+                error.style.border = 'none';
+                error.style.boxShadow = 'none';
+            })
+            amo.addEventListener('click', () =>{
+                amo.style.border = 'none';
+                error.style.backgroundColor = 'transparent';
+                error.style.color = 'transparent';
+                error.style.border = 'none';
+                error.style.boxShadow = 'none';
+            })
+            sele.addEventListener('click', () =>{
+                sele.style.border = 'none';
+                error.style.backgroundColor = 'transparent';
+                error.style.color = 'transparent';
+                error.style.border = 'none';
+                error.style.boxShadow = 'none';
+            })
+
+
+
+                if(FirstName.trim() == ""){
+                error.innerHTML = 'Fill in Firstname'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                Fname.style.border = '1px solid red'
+                return false
+                }else if(!alpha.test(FirstName)){
+                error.innerHTML = 'Fill in Letters Only'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                Fname.style.border = '1px solid red'
+                return false
+                }else if(LastName.trim() == ""){
+                error.innerHTML = 'Fill in Lastname'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                Lname.style.border = '1px solid red'
+                return false
+                }else if(!alpha.test(LastName)){
+                error.innerHTML = 'Fill in Letters Only'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                Lname.style.border = '1px solid red'
+                return false
+                }else if(email.trim() == ""){
+                error.innerHTML = 'Fill in Email'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                mil.style.border = '1px solid red'
+                return false
+                }else if(!eail.test(email)){
+                error.innerHTML = 'Fill in Valid Email'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                mil.style.border = '1px solid red'
+                return false
+                }else if(number.trim() == ""){
+                error.innerHTML = 'Fill in Phone Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                numb.style.border = '1px solid red'
+                return false
+                }else if(!Numbers.test(number)){
+                error.innerHTML = 'Fill in Valid Phone Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                numb.style.border = '1px solid red'
+                return false
+                }else if(number.length < 11 || number.length > 11){
+                error.innerHTML = 'Fill in Valid Phone Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                numb.style.border = '1px solid red'
+                return false
+                }else if(mactric.trim() == ""){
+                error.innerHTML = 'Fill in Matric Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                mact.style.border = '1px solid red'
+                return false
+                }else if(!Numbers.test(mactric)){
+                error.innerHTML = 'Fill in Valid Matric Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                mact.style.border = '1px solid red'
+                return false
+                }else if(mactric.length < 12 || mactric.length > 12){
+                error.innerHTML = 'Fill in Valid Matric Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                mact.style.border = '1px solid red'
+                return false
+                }else if(idnumber.trim() == ""){
+                error.innerHTML = 'Fill in ID Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                idnum.style.border = '1px solid red'
+                return false
+                }else if(!Numbers.test(idnumber)){
+                error.innerHTML = 'Fill in Valid ID Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                idnum.style.border = '1px solid red'
+                return false
+                }else if(idnumber.length < 12 || idnumber.length > 12){
+                error.innerHTML = 'Fill in Valid ID Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                idnum.style.border = '1px solid red'
+                return false
+                }else if(recip.trim() == ""){
+                error.innerHTML = 'Fill in Recipt Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                rec.style.border = '1px solid red'
+                return false
+                }else if(!Numbers.test(recip)){
+                error.innerHTML = 'Fill in Valid Recipt Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                rec.style.border = '1px solid red'
+                return false
+                }else if(recip.length < 12 || recip.length > 12){
+                error.innerHTML = 'Fill in Valid Recipt Number'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                rec.style.border = '1px solid red'
+                return false
+                }else if(amoun.trim() == ""){
+                error.innerHTML = 'Fill in  Amount'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                amo.style.border = '1px solid red'
+                return false
+            }else if(!Numbers.test(amoun)){
+                error.innerHTML = 'Fill in Valid Amount'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                amo.style.border = '1px solid red'
+                return false
+                }else if(selec === 'select'){
+                error.innerHTML = 'Select Method Of Payment'
+                error.style.backgroundColor = 'white'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid red'
+                error.style.color = 'red'
+                sele.style.border = '1px solid red'
+                return false
+                }else{
+                error.innerHTML = 'Successful'
+                error.style.backgroundColor = 'green'
+                error.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)'
+                error.style.border = '2px solid white'
+                error.style.color = 'green'
+                alert.style.border = '1px solid green'
+                localStorage.setItem("FIRSTNAME", FirstName);
+                localStorage.setItem("LASTNAME", LastName);
+                localStorage.setItem("EMAIL", email);
+                localStorage.setItem("NUMBER", number);
+                localStorage.setItem("MACTRIC", mactric);
+                localStorage.setItem("IDNUMBER", idnumber);
+                localStorage.setItem("RECIEPT", recip);
+                localStorage.setItem("AMOUNT", amoun);
+                localStorage.setItem("SELECTION", selec);
+                return true
+                }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="preloader"></div>
+    <div class="navbar" style="background-color: darkblue; height: 8vh;">
+        <h1>
+            FIC
+        </h1>
+        <div class="wrap">
+            <ul>
+                <li>
+                    Home
+                </li>
+                <li>
+                    About Us
+                </li>  
+                <li>Sections</li>
+                <li>Academics</li>
+                <li>Addmission</li>
+                <li> Result</li>
+                <li class="log">Campus</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-section">
+    <div class="banner-section">
+        <img src="./img/Academia-International-College-Logo-removebg-preview.png" alt="">
+        <div class="main">
+        <h1>Flame International College</h1>
+        <p>Motto: Peace & Unity</p>
+    </div>
+    </div>
+    <div class="bod"></div>
+    <div class="bod2"></div>
+    <section>
+        <div class="section-1">
+            <div class="nams">
+                <div>
+                    <h6>First Name</h6>
+                </div>
+                <div id="fname"></div>
+            </div>
+            <div class="nams">
+                <div>
+                    <h6>Last Name</h6>
+                </div>
+                <div id="lname"></div>
+            </div>
+            <div class="nams">
+                <div>
+                    <h6>Email Address</h6>
+                </div>
+                <div id="mail"></div>
+            </div>
+            <div class="nams">
+                <div>
+                    <h6>Phone Number</h6>
+                </div>
+                <div id="num"></div>
+            </div>
+            <div class="nams">
+                <div>
+                    <h6>Mac Number</h6>
+                </div>
+                <div id="mac"></div>
+            </div>
+            <div class="nams">
+                <div>
+                    <h6>ID Number</h6>
+                </div>
+                <div id="id"></div>
+            </div>
+            <div class="nams">
+                <div>
+                    <h6>Reciept Number</h6>
+                </div>
+                <div id="recip"></div>
+            </div>
+            <div class="nams">
+                <div>
+                    <h6>Amount</h6>
+                </div>
+                <div id="amount"></div>
+            </div>
+            <div class="nams">
+                <div>
+                    <h6>Payment Method</h6>
+                </div>
+                <div id="paym"></div>
+            </div>
+        </div>
+        <button onclick="printreciept()">Print</button>
+    </section>
+    </div>
+
+    <script>
+
+        function printreciept(){
+            window.print();
+        }
+
+        let loader = document.getElementById('preloader');
+
+        function viewpage(){
+            loader.style.display = 'none';
+        }
+        window.addEventListener('load', () =>{
+            setTimeout(viewpage, 3000)
+        })
+
+
+        window.addEventListener('load', () =>{
+            let firstname = localStorage.getItem('FIRSTNAME');
+            let lastname = localStorage.getItem('LASTNAME');
+            let email = localStorage.getItem('EMAIL');
+            let number = localStorage.getItem('NUMBER');
+            let mactric = localStorage.getItem('MACTRIC');
+            let idnum = localStorage.getItem('IDNUMBER');
+            let reciept = localStorage.getItem('RECIEPT');
+            let amoun = localStorage.getItem('AMOUNT');
+            let select= localStorage.getItem('SELECTION');
+
+
+            document.getElementById('fname').innerHTML = firstname;
+            document.getElementById('lname').innerHTML = lastname;
+            document.getElementById('mail').innerHTML = email;
+            document.getElementById('num').innerHTML = number;
+            document.getElementById('mac').innerHTML = mactric;
+            document.getElementById('id').innerHTML = idnum;
+            document.getElementById('recip').innerHTML = reciept;
+            document.getElementById('amount').innerHTML = amoun;
+            document.getElementById('paym').innerHTML = select;
+        })
+    </script>
+</body>
+</html>

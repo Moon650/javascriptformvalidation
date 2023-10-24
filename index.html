@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="preloader"></div>
+    <div class="banner2">
+    <div class="navbar">
+        <h1>
+            FIC
+        </h1>
+        <div class="wrap">
+            <ul>
+                <li>
+                    Home
+                </li>
+                <li>
+                    About Us
+                </li>  
+                <li>Sections</li>
+                <li>Academics</li>
+                <li>Addmission</li>
+                <li> Result</li>
+                <li class="log">Campus</li>
+            </ul>
+            <button type="submit"> <a href="./reciept.html">Pay Now</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="banner5">
+        <h1>Flame International College</h1>
+        <p>Motto: Peace & Unity</p>
+        <button>Let's get started</button>
+    </div>
+    </div>
+    <script>
+
+        let loader = document.getElementById('preloader');
+
+        function viewpage(){
+            loader.style.display = 'none';
+        }
+        window.addEventListener('load', () =>{
+            setTimeout(viewpage, 3000)
+        })
+
+    </script>
+</body>
+</html>
